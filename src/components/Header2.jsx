@@ -34,11 +34,11 @@ const Header2 = () => {
                 Home
               </li>
             </Link>
-            <a href="#about">
+           <Link to='/'>
               <li className="hover:bg-[#42AAFF] pl-3 h-[60px] leading-[60px]">
                 About
               </li>
-            </a>
+              </Link>
             <Link to="/map">
               <li className="hover:bg-[#42AAFF] pl-3 h-[60px] leading-[60px]  ">
                 Map
@@ -70,29 +70,33 @@ const Header2 = () => {
           </svg>
 
           <div className=" uppercase text-2xl    font-[500] text-[#42AAFF] ">
-            Novation
+          <Link to='/'>Novation</Link>
           </div>
         </div>
         <div className="md:flex  items-center">
-          <ul className="md:flex hidden items-center gap-6 mr-[100px] text-black ">
-          <Link to="/">
+          <ul className="md:flex hidden items-center gap-6 mr-[60px]  ">
+            <Link to="/">
               <li>Home</li>
             </Link>
-            <a href="/">
+            <Link to='/'>
               <li>About</li>
-            </a>
+              </Link>
             <Link to="/map">
               <li>Map</li>
             </Link>
-            <Link to="/signUp">
-              <li>SignUp</li>
-            </Link>
           </ul>
           <div className="flex items-center gap-3">
-            <button className="bg-[#42AAFF] h-[40px] md:block hidden leading-[40px] px-4 rounded-lg text-sm text-white">
+       
+            <Link to='/signUp'>
+            <button className="  border-[1px] bg-[#42AAFF] text-white   h-[40px] md:block hidden leading-[40px] px-4 rounded-lg text-sm ">
               Sign Up
             </button>
-            <button className=" md:hidden flex items-center justify-center w-7 h-7 bg-[#42AAFF] rounded-[50%]">
+            </Link>
+        
+            <button className="bg-white  border-[1px] border-white h-[40px] md:block hidden leading-[40px] px-4 rounded-lg text-sm text-black">
+              Sign In
+            </button>
+            <button className=" md:hidden flex items-center justify-center w-7 h-7 bg-white rounded-[50%]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-5 h-5 "

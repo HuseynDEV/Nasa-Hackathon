@@ -1,4 +1,5 @@
 import React from "react";
+import fire_map from '../firee.png'
 import {
   BarChart,
   Bar,
@@ -9,50 +10,52 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import Footer from "./Footer";
 
 const data = [
   {
     name: "America",
-    normal: 40,
-    severe: 60,
+    Moderate: 30,
+    High: 50,
+    Low:20,
     amt: 100,
   },
   {
     name: "Canada",
-    normal: 30,
-    severe: 70,
+    Moderate: 15,
+    High: 40,
+    Low:45 ,
     amt: 100,
   },
   {
     name: "Azerbaijan",
-    normal: 80,
-    severe: 20,
+    Moderate: 20,
+    High: 10,
+    Low:70,
     amt: 100,
   },
   {
     name: "Finland",
-    normal: 90,
-    severe: 10,
+    Moderate: 40,
+    High: 10,
+    Low:50 ,
     amt: 100,
   },
   {
     name: "Egypt",
-    normal: 40,
-    severe: 60,
+    Moderate: 40,
+    High: 20,
+    Low:40,
     amt: 100,
   },
   {
-    name: "French",
-    normal: 80,
-    severe: 20,
+    name: "Alaska",
+    Moderate: 60,
+    High: 10,
+    Low:30,
     amt: 100,
   },
-  {
-    name: "Italy",
-    normal: 90,
-    severe: 10,
-    amt: 100,
-  },
+
 ];
 
 export default function Maps() {
@@ -61,10 +64,12 @@ export default function Maps() {
         <h1 className="text-3xl mb-[20px]">Fire Map</h1>
       <img
       className="w-full h-[400px] mb-[100px] object-cover"
-        src="https://beta.ctvnews.ca/content/dam/ctvnews/images/2023/8/20/1_6526347.jpg?cache_timestamp=1692540566469
-"
+        src={fire_map}
         alt=""
       />
+
+
+      <h1 className="text-3xl mb-[40px]">Statistics of Fire</h1>
 
       <ResponsiveContainer width="95%" height={400}>
         <BarChart
@@ -88,10 +93,13 @@ export default function Maps() {
           />
           <Tooltip />
           <Legend />
-          <Bar dataKey="severe" fill="#fc3003" />
-          <Bar dataKey="normal" fill="#fcdb03" />
+          <Bar dataKey="High" fill="#DF5331" />
+          <Bar dataKey="Moderate" fill="#F48441" />
+          <Bar dataKey="Low" fill="#FFD645" />
         </BarChart>
       </ResponsiveContainer>
+
+
     </div>
   );
 }

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import globe from "../globee.png";
 import { Link } from "react-router-dom";
-import main from '../main.png'
+import main from "../main.png";
+import "../App.css";
 
 const Header = () => {
   const [mobile, setMobile] = useState(false);
+  const [open, setOpen]=useState(false)
 
   const changeMobile = (item) => {
     return setMobile(item);
@@ -14,7 +16,7 @@ const Header = () => {
     <div className="bg-[#42AAFF]">
       <div className="flex items-center justify-between h-[80px] leading-[80px] max-w-[1300px] px-2 mx-auto">
         <div
-          className="hidden absolute top-0 left-0 w-[200px] pr-5 h-[100vh] pt-3 bg-white "
+          className="hidden fixed top-0 left-0 w-[200px] pr-5 h-[100vh] pt-3 bg-white "
           style={{ display: mobile ? "block" : "none" }}
         >
           <div className="w-full flex items-center justify-end">
@@ -51,11 +53,17 @@ const Header = () => {
                 Map
               </li>
             </Link>
+            <Link to='/test'>
+            <li className="hover:bg-[#42AAFF] pl-3 h-[60px] leading-[60px]  ">
+                Test
+              </li>
+            </Link>
             <Link to="/signUp">
               <li className="hover:bg-[#42AAFF] pl-3 h-[60px] leading-[60px]  ">
                 SignUp
               </li>
             </Link>
+
           </ul>
         </div>
         <div className="flex items-center gap-2">
@@ -76,7 +84,8 @@ const Header = () => {
           </svg>
 
           <div className=" uppercase text-2xl    font-[500] text-white ">
-            Novation
+            <Link to='/'>Novation</Link>
+            
           </div>
         </div>
         <div className="md:flex  items-center">
@@ -87,18 +96,23 @@ const Header = () => {
             <a href="#about">
               <li>About</li>
             </a>
-            <Link to="/map">
-              <li>Map</li>
+            <Link to="/map" className="map">
+              <li className="first " onClick={()=>setOpen(!open)}>Map</li>
+            </Link>
+            <Link to='/test'>
+            <li className="hover:bg-[#42AAFF] pl-3 h-[60px] leading-[60px]  ">
+                Test
+              </li>
             </Link>
           </ul>
+          
           <div className="flex items-center gap-3">
-       
-            <Link to='/signUp'>
-            <button className="bg-white h-[40px] md:block hidden leading-[40px] px-4 rounded-lg text-sm text-black">
-              Sign Up
-            </button>
+            <Link to="/signUp">
+              <button className=" bg-transparent border-[1px] border-white  text-white   h-[40px] md:block hidden leading-[40px] px-4 rounded-lg text-sm text-black">
+                Sign Up
+              </button>
             </Link>
-        
+
             <button className="bg-white h-[40px] md:block hidden leading-[40px] px-4 rounded-lg text-sm text-black">
               Sign In
             </button>
@@ -133,15 +147,15 @@ const Header = () => {
             aliquid, quis praesentium labore at dolorum beatae, velit ipsa odit
             adipisci!
           </p>
-         <div className="w-full flex items-center md:justify-start justify-center ">
-         <button className="bg-white px-6 py-3 md:mb-0 mb-4  rounded-lg text-black text-sm font-semibold ">
-            Learn More
-          </button>
-         </div>
+          <div className="w-full flex items-center md:justify-start justify-center ">
+            <button className="bg-white px-6 py-3 md:mb-0 mb-4  rounded-lg text-black text-sm font-semibold ">
+              Learn More
+            </button>
+          </div>
         </div>
         <div className="md:w-[50%] md:h-[300px] h-[200px] md:mt-0 mt-[20px] flex items-center justify-center">
           <img
-            className="md:w-[450px] w-[270px] h-auto"
+            className="md:w-[450px] w-[300px] h-auto"
             src={main}
             alt="globe"
           />

@@ -5,11 +5,14 @@ import Footer from '../components/Footer'
 
 const SignUp = () => {
   return (
-    <div className="max-w-[1300px] px-2 mx-auto">
+   <div>
+     <div className="max-w-[1300px] px-2 mx-auto">
         <Header2/>
         <Register/>
-        <Footer/>
+   
     </div>
+         <Footer/>
+   </div>
   )
 }
 

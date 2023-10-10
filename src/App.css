@@ -21,3 +21,39 @@ label{
 select{
   width: 100%;
   }
+
+
+
+
+
+
+
+
+  .download-tab-button{
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .tab{
+    display: none
+  }
+
+  .tab, .clickable, .icon, .download-tab-button{
+    display:none !important
+  }
+
+  .footerRowSingle{
+    display: none !important;
+    background: white !important;
+  }
+
+  .HeaderHTML{
+    display: none !important;
+  }
+
+
+
+
+  .App-header{
+    /* margin-top: 10px; */
+  }
