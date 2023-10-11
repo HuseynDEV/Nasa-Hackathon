@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Nasa/static/css/main.c4996316.css",
+    "main.js": "/Nasa/static/js/main.b4cd107b.js",
+    "static/media/fireMap.png": "/Nasa/static/media/fireMap.7b8d3ca22b8d02e1e49b.png",
+    "static/media/firee.png": "/Nasa/static/media/firee.8b0d6e1155a863210895.png",
+    "static/media/forestMap.png": "/Nasa/static/media/forestMap.dc8172944445e8109521.png",
+    "static/media/main.png": "/Nasa/static/media/main.72884fcf3fda9bc4eaec.png",
+    "static/media/cameraMap.png": "/Nasa/static/media/cameraMap.d8912e983c94ca0a4951.png",
+    "static/media/globee.png": "/Nasa/static/media/globee.ec27750b3cfec62521ad.png",
+    "index.html": "/Nasa/index.html",
+    "main.c4996316.css.map": "/Nasa/static/css/main.c4996316.css.map",
+    "main.b4cd107b.js.map": "/Nasa/static/js/main.b4cd107b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4996316.css",
+    "static/js/main.b4cd107b.js"
+  ]
+}
